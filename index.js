@@ -1,3 +1,4 @@
+"use strict"
 const webp_name = 'can_use_webp';
 function detectWebp() {
   if (!window.localStorage || typeof localStorage !== 'object') return;
