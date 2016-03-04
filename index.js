@@ -1,5 +1,4 @@
-"use strict"
-const webp_name = 'can_use_webp';
+var webp_name = 'can_use_webp';
 function detectWebp() {
   if (!window.localStorage || typeof localStorage !== 'object') return;
   if (!localStorage.getItem(webp_name) || (localStorage.getItem(webp_name) !==
@@ -23,8 +22,6 @@ function detectWebp() {
 
 detectWebp();
 
-var supportWebp = function() {
+module.exports = function() {
   return !!window.localStorage && window.localStorage.getItem(webp_name) === 'available';
 };
-
-module.exports = supportWebp
