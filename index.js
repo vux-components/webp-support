@@ -3,7 +3,7 @@ function detectWebp() {
   if (!window.localStorage || typeof localStorage !== 'object') return;
   if (!localStorage.getItem(webp_name) || (localStorage.getItem(webp_name) !==
       'available' && localStorage.getItem(webp_name) !== 'disable')) {
-    const img = document.createElement('img');
+    var img = document.createElement('img');
     img.onload = function() {
       try {
         localStorage.setItem(webp_name, 'available');
